@@ -17,12 +17,8 @@
 
         <!-- Form -->
           <form action="config/authenticate.php" method="post" class="mt-4">
-             <!-- Display error message if it exists -->
-      <!-- <!-- <?php if (isset($_SESSION['error_message'])) : ?>
-        <div class="mb-4 text-red-500">
-          <?php echo $_SESSION['error_message']; ?>
-        </div>
-      <?php endif; ?> -->
+
+
           <div class="mb-3">
             <label class="mb-2 block text-xs font-semibold">Student Number</label>
             <input type="text" placeholder="Enter your student num" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
@@ -62,14 +58,10 @@
 
   </div>
 
-  <!-- Credit -->
-  <div class="mt-3 w-full">
-      <p class="text-center">Made by <a target="_blank" href="https://www.instagram.com/_inubayuaji/" class="text-purple-700">Inu Bayu Aji</a> and ispired by <a target="_blank" href="https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI" class="text-purple-700">this</a>.</p>
-  </div>
+
 </div>
 
 <?php
 
-  unset($_SESSION['error_message']);
   include '../partials/footer.php'; 
 ?>
