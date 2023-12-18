@@ -1,1 +1,1 @@
-# my_clyde_dev
+# myClyde
