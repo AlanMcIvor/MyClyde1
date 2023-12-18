@@ -2,43 +2,74 @@
     include '../config/config.php';
     include '../partials/header.php';
 ?>
-
 <!-- component -->
-<div class="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat" style="background-image:url('https://images.unsplash.com/photo-1499123785106-343e69e68db1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80')">
-  <div class="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
-    <div class="text-white">
-      <div class="mb-8 flex flex-col items-center">
-        <img src="https://www.logo.wine/a/logo/Instagram/Instagram-Glyph-Color-Logo.wine.svg" width="150" alt="" srcset="" />
-        <h1 class="mb-2 text-2xl">Student Login</h1>
-        <span class="text-gray-300">Enter Login Details</span>
-      </div>
+<!-- Container -->
+<div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
+  
+  <!-- Login component -->
+  <div class="flex shadow-md">
+    <!-- Login form -->
+    <div class="flex flex-wrap content-center justify-center rounded-l-md bg-white" style="width: 24rem; height: 32rem;">
+      <div class="w-72">
+        <!-- Heading -->
+        <h1 class="text-xl font-semibold">Welcome back</h1>
+        <small class="text-gray-400">Please enter your details</small>
 
-      <!-- Display error message if it exists -->
-      <?php if (isset($_SESSION['error_message'])) : ?>
+        <!-- Form -->
+          <form action="config/authenticate.php" method="post" class="mt-4">
+             <!-- Display error message if it exists -->
+      <!-- <!-- <?php if (isset($_SESSION['error_message'])) : ?>
         <div class="mb-4 text-red-500">
           <?php echo $_SESSION['error_message']; ?>
         </div>
-      <?php endif; ?>
+      <?php endif; ?> -->
+          <div class="mb-3">
+            <label class="mb-2 block text-xs font-semibold">Student Number</label>
+            <input type="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+          </div>
 
-      <form action="config/authenticate.php" method="post">
-        <div class="mb-4 text-lg">
-          <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="student_num" placeholder="20145874" />
-        </div>
+          <div class="mb-3">
+            <label class="mb-2 block text-xs font-semibold">Password</label>
+            <input type="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+          </div>
 
-        <div class="mb-4 text-lg">
-          <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="password" name="psw" placeholder="*********" />
-        </div>
+          <div class="mb-3 flex flex-wrap content-center">
+            <input id="remember" type="checkbox" class="mr-1 checked:bg-purple-700" /> <label for="remember" class="mr-auto text-xs font-semibold">Remember for 30 days</label>
+            <a href="#" class="text-xs font-semibold text-purple-700">Forgot password?</a>
+          </div>
 
-        <div class="mt-8 flex justify-center text-lg text-black">
-          <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
+          <div class="mb-3">
+            <button class="mb-1.5 block w-full text-center text-white bg-purple-700 hover:bg-purple-900 px-2 py-1.5 rounded-md">Sign in</button>
+            <button class="flex flex-wrap justify-center w-full border border-gray-300 hover:border-gray-500 px-2 py-1.5 rounded-md">
+              <img class="w-5 mr-2" src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA">
+              Sign in with Google
+            </button>
+          </div>
+        </form>
+
+        <!-- Footer -->
+        <div class="text-center">
+          <span class="text-xs text-gray-400 font-semibold">Don't have account?</span>
+          <a href="#" class="text-xs font-semibold text-purple-700">Sign up</a>
         </div>
-      </form>
+      </div>
     </div>
+
+    <!-- Login banner -->
+    <div class="flex flex-wrap content-center justify-center rounded-r-md" style="width: 24rem; height: 32rem;">
+      <img class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" src="https://i.imgur.com/9l1A4OS.jpeg">
+    </div>
+
+  </div>
+
+  <!-- Credit -->
+  <div class="mt-3 w-full">
+      <p class="text-center">Made by <a target="_blank" href="https://www.instagram.com/_inubayuaji/" class="text-purple-700">Inu Bayu Aji</a> and ispired by <a target="_blank" href="https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI" class="text-purple-700">this</a>.</p>
   </div>
 </div>
 
 <?php
-  // Clear the error message after displaying it
+
   unset($_SESSION['error_message']);
-  include '../partials/footer.php'; // You may include your footer file here if needed
+  include '../partials/footer.php'; 
 ?>
