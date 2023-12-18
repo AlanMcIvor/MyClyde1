@@ -25,7 +25,7 @@
       <?php endif; ?> -->
           <div class="mb-3">
             <label class="mb-2 block text-xs font-semibold">Student Number</label>
-            <input type="email" placeholder="Enter your email" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            <input type="text" placeholder="Enter your student num" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
           </div>
 
           <div class="mb-3">
