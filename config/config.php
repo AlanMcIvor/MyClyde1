@@ -8,8 +8,8 @@
 
 
 $hn = "localhost";
-$un = "my_clyde_admin";
-$pw = "dC3RPzI*H1oC2kdr";
+$un = "alan_admin";
+$pw = "_)OperPTkhzG[Yu-";
 $db = "myclyde";
 
 $conn = new mysqli($hn, $un, $pw, $db);

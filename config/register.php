@@ -27,4 +27,4 @@ if ($stmt->num_rows > 0) {
     $conn->close();
 }
 
-header('Location: ../pages/Login.php');
+header('Location: ../login');

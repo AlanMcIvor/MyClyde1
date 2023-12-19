@@ -17,16 +17,21 @@
 
         <!-- Form -->
           <form action="config/authenticate.php" method="post" class="mt-4">
-
+    <!-- Display error message if it exists -->
+    <?php if (isset($_SESSION['error_message'])) : ?>
+        <div class="mb-4 text-red-500">
+          <?php echo $_SESSION['error_message']; ?>
+        </div>
+      <?php endif; ?>
 
           <div class="mb-3">
             <label class="mb-2 block text-xs font-semibold">Student Number</label>
-            <input type="text" placeholder="Enter your student num" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            <input name="student_num" type="text" placeholder="Enter your student num" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
           </div>
 
           <div class="mb-3">
             <label class="mb-2 block text-xs font-semibold">Password</label>
-            <input type="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+            <input name="psw" type="password" placeholder="*****" class="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
           </div>
 
           <div class="mb-3 flex flex-wrap content-center">

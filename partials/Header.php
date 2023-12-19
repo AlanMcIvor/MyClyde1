@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  define('BASE_PATH', 'http://localhost/MyClyde/');
+  define('BASE_PATH', 'http://localhost:8080/MyClyde/');
 
 
 ?>

@@ -29,13 +29,13 @@ if ($stmt = $conn->prepare('SELECT student_num, psw FROM student WHERE student_n
            header('Location: ../s/dashboard');
 
         } else {
-            $errorMessage = 'Incorrect login details!';
-            header('Location: Login'); // Redirect back to the login page
+            $errorMessage = 'Incorrect password details!';
+            header('Location: ../login'); // Redirect back to the login page
 
         }
     } else {
-        $errorMessage = 'Incorrect login details!';
-        header('Location: Login'); // Redirect back to the login page
+        $errorMessage = 'Incorrect username details!';
+        header('Location: ../login'); // Redirect back to the login page
 
     }
 
